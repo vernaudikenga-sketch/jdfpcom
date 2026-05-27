@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 18% 8%;
+    --foreground: 0 0% 95%;
+    --card: 220 16% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 220 16% 12%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 48 100% 50%;
+    --primary-foreground: 220 18% 8%;
+    --secondary: 220 14% 16%;
+    --secondary-foreground: 0 0% 85%;
+    --muted: 220 12% 18%;
+    --muted-foreground: 220 8% 55%;
+    --accent: 48 100% 50%;
+    --accent-foreground: 220 18% 8%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 12% 20%;
+    --input: 220 12% 20%;
+    --ring: 48 100% 50%;
+    --radius: 0.5rem;
+    --gold: 48 100% 50%;
+    --gold-light: 48 80% 60%;
+    --midnight: 220 18% 8%;
+    --anthracite: 220 14% 16%;
+    --silver: 220 8% 65%;
+    --gradient-gold: linear-gradient(135deg, hsl(48 100% 50%), hsl(42 85% 58%));
+    --gradient-dark: linear-gradient(180deg, hsl(220 18% 8%), hsl(220 16% 14%));
+    --shadow-gold: 0 4px 30px -8px hsl(48 100% 50% / 0.3);
+    --shadow-elevated: 0 20px 60px -15px hsl(0 0% 0% / 0.6);
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.04em;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold rounded-xl transition-all duration-200 active:scale-95;
+    background: var(--gradient-gold);
+    color: hsl(var(--primary-foreground));
+    box-shadow: var(--shadow-gold);
+  }
+  .btn-gold:hover {
+    opacity: 0.9;
+    box-shadow: 0 6px 40px -8px hsl(48 100% 50% / 0.5);
+  }
+
+  .btn-outline-gold {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold rounded-xl border transition-all duration-200;
+    border-color: hsl(var(--gold));
+    color: hsl(var(--gold));
+  }
+  .btn-outline-gold:hover {
+    background-color: hsl(var(--gold) / 0.1);
+  }
+
+  .card-dark {
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    @apply rounded-2xl;
+  }
+  .card-dark:hover {
+    border-color: hsl(var(--gold) / 0.4);
+    box-shadow: var(--shadow-gold);
+  }
+
+  .gold-text {
+    color: hsl(var(--gold));
+  }
+
+  .section-tag {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest;
+    background-color: hsl(var(--gold) / 0.1);
+    color: hsl(var(--gold));
+    border: 1px solid hsl(var(--gold) / 0.2);
+  }
+
+  .input-dark {
+    @apply w-full px-4 py-3 rounded-xl text-sm transition-colors;
+    background-color: hsl(var(--secondary));
+    border: 1px solid hsl(var(--border));
+    color: hsl(var(--foreground));
+  }
+  .input-dark::placeholder {
+    color: hsl(var(--muted-foreground));
+  }
+  .input-dark:focus {
+    outline: none;
+    border-color: hsl(var(--gold));
+    box-shadow: 0 0 0 2px hsl(var(--gold) / 0.15);
+  }
+
+  .divider-gold {
+    @apply w-12 h-0.5 rounded-full;
+    background: var(--gradient-gold);
+  }
+
+  .page-hero {
+    background: var(--gradient-dark);
+    @apply py-16;
+  }
+}
+
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  animation: ticker-scroll 32s linear infinite;
+  width: max-content;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}

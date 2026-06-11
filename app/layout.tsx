@@ -1,9 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import WhatsAppButton from '@/components/layout/WhatsAppButton';
-import PartnerTicker from '@/components/layout/PartnerTicker';
+import ConditionalLayout from '@/components/layout/ConditionalLayout';
 import { COMPANY } from '@/lib/constants';
 
 export const metadata: Metadata = {
@@ -23,15 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr">
       <body>
-        <Header />
-        <main className="min-h-screen pt-16">
-          <div className="sticky top-16 z-40">
-            <PartnerTicker />
-          </div>
-          {children}
-        </main>
-        <Footer />
-        <WhatsAppButton />
+        <ConditionalLayout>{children}</ConditionalLayout>
       </body>
     </html>
   );

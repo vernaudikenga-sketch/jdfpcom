@@ -80,11 +80,12 @@ export default function VehiculesPage() {
     e.preventDefault();
     setSubmitLoading(true);
     setSubmitError('');
+    const vehicleName = selectedVehicle ? `${selectedVehicle.brand} ${selectedVehicle.model}` : null;
     const { error } = await supabase.from('vehicle_reservations').insert([
       {
         ...formData,
         vehicle_id: selectedVehicle?.id || null,
-        vehicle_name: selectedVehicle ? `${selectedVehicle.brand} ${selectedVehicle.model}` : null,
+        vehicle_name: vehicleName,
         status: 'pending',
       },
     ]);
@@ -93,6 +94,11 @@ export default function VehiculesPage() {
       setSubmitError('Une erreur est survenue. Veuillez réessayer.');
       return;
     }
+    fetch('/api/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type: 'vehicle', data: { ...formData, vehicle_name: vehicleName, airport_pickup: String(formData.airport_pickup) } }),
+    }).catch(() => {});
     setSubmitSuccess(true);
     setFormData({
       client_name: '',

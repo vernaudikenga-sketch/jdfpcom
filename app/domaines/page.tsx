@@ -166,6 +166,11 @@ export default function DomainesPage() {
     if (insertError) {
       setError("Une erreur s'est produite. Veuillez réessayer.");
     } else {
+      fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'domain', data: orderForm }),
+      }).catch(() => {});
       setSuccess(true);
     }
     setSubmitting(false);

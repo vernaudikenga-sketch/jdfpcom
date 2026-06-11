@@ -127,6 +127,11 @@ export default function VisasPage() {
       setSubmitError('Une erreur est survenue. Veuillez réessayer.');
       return;
     }
+    fetch('/api/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type: 'visa', data: { ...formData, passport_number: formData.passport_number.toUpperCase() } }),
+    }).catch(() => {});
     setSubmitSuccess(true);
     setFormData({
       full_name: '',

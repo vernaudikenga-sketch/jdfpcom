@@ -149,6 +149,40 @@ function domainAlertHtml(d: Record<string, string>) {
   );
 }
 
+// ── PUBLICITÉ ─────────────────────────────────────────────────────────────────
+
+function advertisingClientHtml(d: Record<string, string>) {
+  return baseTemplate(
+    '✅ Votre demande de réservation a bien été reçue',
+    `<p style="color:#9ca3af;margin:0 0 20px 0">Bonjour <strong style="color:#fff">${d.client_name}</strong>,</p>
+    <p style="color:#9ca3af;margin:0 0 20px 0">Votre demande de réservation d'espace publicitaire est enregistrée. Notre équipe commerciale vous contactera dans les <strong style="color:#fbbf24">24 heures ouvrables</strong>.</p>
+    ${table(
+      row('Campagne', d.campaign_name) +
+      row('Entreprise', d.company_name || '—') +
+      row('Date de début', d.start_date) +
+      row('Date de fin', d.end_date) +
+      row('Budget', `$${parseFloat(d.budget_usd || '0').toLocaleString()} USD`)
+    )}
+    <p style="color:#9ca3af;font-size:13px">Pour toute question : <a href="https://wa.me/243898108447" style="color:#fbbf24">WhatsApp</a> ou répondez à cet email.</p>`
+  );
+}
+
+function advertisingAlertHtml(d: Record<string, string>) {
+  return baseTemplate(
+    '📢 Nouvelle réservation publicitaire',
+    table(
+      row('Client', d.client_name) +
+      row('Email', d.client_email) +
+      row('Téléphone', d.client_phone) +
+      row('Entreprise', d.company_name || '—') +
+      row('Campagne', d.campaign_name) +
+      row('Date début', d.start_date) +
+      row('Date fin', d.end_date) +
+      row('Budget', `$${parseFloat(d.budget_usd || '0').toLocaleString()} USD`)
+    )
+  );
+}
+
 // ── CONTACT ───────────────────────────────────────────────────────────────────
 
 function contactClientHtml(d: Record<string, string>) {
@@ -207,6 +241,12 @@ export async function POST(req: Request) {
     clientHtml = domainClientHtml(d);
     alertSubject = `[DOMAINE] Nouvelle commande – ${d.client_name}`;
     alertHtml = domainAlertHtml(d);
+  } else if (type === 'advertising') {
+    clientEmail = d.client_email;
+    clientSubject = 'JDFP – Votre demande de réservation est enregistrée';
+    clientHtml = advertisingClientHtml(d);
+    alertSubject = `[PUBLICITÉ] Nouvelle réservation – ${d.client_name}`;
+    alertHtml = advertisingAlertHtml(d);
   } else if (type === 'contact') {
     clientEmail = d.email;
     clientSubject = 'JDFP – Votre message a bien été reçu';

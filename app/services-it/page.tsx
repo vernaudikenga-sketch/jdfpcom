@@ -158,7 +158,7 @@ export default function ServicesITPage() {
 
       <section className="relative py-20 overflow-hidden">
         <img
-          src="https://build-my-site-now-890.lovable.app/assets/office-premium-D-UgUq69.jpg"
+          src="/images/office-premium.jpg"
           alt="Office"
           loading="lazy"
           className="absolute inset-0 w-full h-full object-cover opacity-15"

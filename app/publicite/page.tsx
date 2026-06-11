@@ -100,6 +100,11 @@ export default function PublicitePage() {
     if (insertError) {
       setError("Une erreur s'est produite. Veuillez réessayer.");
     } else {
+      await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'advertising', data: bookingForm }),
+      });
       setSuccess(true);
       setBookingForm({
         client_name: '',
@@ -119,7 +124,7 @@ export default function PublicitePage() {
     <div className="min-h-screen bg-[hsl(220_18%_8%)]">
       <div className="relative overflow-hidden py-20 px-6">
         <img
-          src="https://build-my-site-now-890.lovable.app/assets/jdfp-branding-UZL4Avtx.jpeg"
+          src="/images/jdfp-branding.jpeg"
           alt="Publicité"
           className="absolute inset-0 w-full h-full object-cover opacity-15"
         />

@@ -29,4 +29,5 @@ export const NAV_LINKS = [
   { label: 'Visas & Voyage', href: '/visas' },
   { label: 'Véhicules', href: '/vehicules' },
   { label: 'Domaines & Hosting', href: '/domaines' },
+  { label: 'Contact', href: '/contact' },
 ];

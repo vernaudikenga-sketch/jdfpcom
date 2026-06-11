@@ -149,6 +149,34 @@ function domainAlertHtml(d: Record<string, string>) {
   );
 }
 
+// ── CONTACT ───────────────────────────────────────────────────────────────────
+
+function contactClientHtml(d: Record<string, string>) {
+  return baseTemplate(
+    '✅ Votre message a bien été reçu',
+    `<p style="color:#9ca3af;margin:0 0 20px 0">Bonjour <strong style="color:#fff">${d.full_name}</strong>,</p>
+    <p style="color:#9ca3af;margin:0 0 20px 0">Nous avons bien reçu votre message et vous répondrons dans les <strong style="color:#fbbf24">48 heures ouvrables</strong>.</p>
+    ${table(
+      row('Sujet', d.subject || '—') +
+      row('Message', d.message)
+    )}
+    <p style="color:#9ca3af;font-size:13px">Pour une réponse immédiate : <a href="https://wa.me/243898108447" style="color:#fbbf24">WhatsApp</a></p>`
+  );
+}
+
+function contactAlertHtml(d: Record<string, string>) {
+  return baseTemplate(
+    '📩 Nouveau message de contact',
+    table(
+      row('Nom', d.full_name) +
+      row('Email', d.email) +
+      row('Téléphone', d.phone || '—') +
+      row('Sujet', d.subject || '—') +
+      row('Message', d.message)
+    )
+  );
+}
+
 // ── HANDLER ───────────────────────────────────────────────────────────────────
 
 export async function POST(req: Request) {
@@ -179,6 +207,12 @@ export async function POST(req: Request) {
     clientHtml = domainClientHtml(d);
     alertSubject = `[DOMAINE] Nouvelle commande – ${d.client_name}`;
     alertHtml = domainAlertHtml(d);
+  } else if (type === 'contact') {
+    clientEmail = d.email;
+    clientSubject = 'JDFP – Votre message a bien été reçu';
+    clientHtml = contactClientHtml(d);
+    alertSubject = `[CONTACT] ${d.subject || 'Nouveau message'} – ${d.full_name}`;
+    alertHtml = contactAlertHtml(d);
   } else {
     return NextResponse.json({ error: 'Unknown type' }, { status: 400 });
   }

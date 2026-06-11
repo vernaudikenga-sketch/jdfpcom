@@ -60,7 +60,7 @@ export default function DashboardPage() {
           .then((r) => r.json())
           .then((d) => [c.table, Array.isArray(d) ? d.length : 0] as [string, number])
       )
-    ).then((entries) => setCounts(Object.fromEntries(entries) as Counts));
+    ).then((entries) => setCounts(Object.fromEntries(entries) as unknown as Counts));
   }, []);
 
   return (

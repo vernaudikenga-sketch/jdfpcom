@@ -130,6 +130,13 @@ export default function IADroitPage() {
         </div>
       </div>
 
+      <div className="bg-amber-500/10 border-b border-amber-500/30 py-3">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-3">
+          <span className="bg-amber-400 text-black text-xs font-black px-2.5 py-1 rounded-full uppercase tracking-wider shrink-0">Démonstration</span>
+          <p className="text-amber-300 text-sm">Les résultats affichés sont simulés à des fins de démonstration et ne constituent pas une analyse juridique réelle.</p>
+        </div>
+      </div>
+
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           <div className="card-dark overflow-hidden">

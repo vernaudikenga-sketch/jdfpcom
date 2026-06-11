@@ -7,7 +7,7 @@ export const COMPANY = {
   address: 'Av. Tombalbaye n° A19 local 03, Kinshasa/Gombe, RDC',
   phone: '+243 898 108 447',
   whatsapp: '243898108447',
-  email: 'contact@jdfp-communication.cd',
+  email: 'contact@jdfp-communication.com',
   banks: {
     tmb: { name: 'TMB', account: '1201-5902743-00-03' },
     equity: { name: 'EQUITY BCDC', account: '00011-05001-12000218859-10' },

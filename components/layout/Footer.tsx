@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-5">
               <img
-                src="https://build-my-site-now-890.lovable.app/assets/logo-jdfp-QVc2ccJJ.jpeg"
+                src="/images/logo-jdfp.jpeg"
                 alt="JDFP Logo"
                 className="w-10 h-10 rounded-xl object-cover"
                 loading="lazy"

@@ -6,8 +6,6 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { NAV_LINKS, COMPANY } from '@/lib/constants';
 
-const LOVABLE_BASE = 'https://build-my-site-now-890.lovable.app';
-
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -34,7 +32,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-3 group">
             <img
-              src={`${LOVABLE_BASE}/assets/logo-jdfp-QVc2ccJJ.jpeg`}
+              src="/images/logo-jdfp.jpeg"
               alt="JDFP Logo"
               className="w-9 h-9 rounded-lg object-cover"
               loading="eager"

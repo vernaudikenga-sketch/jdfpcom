@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { supabase } from '@/lib/supabase';
+import { supabasePyramide as supabase } from '@/lib/supabase-pyramide';
 import {
   AlertCircle,
   CheckCircle2,
@@ -177,7 +177,7 @@ export default function VerifyBadgePage({ params }: VerifyPageProps) {
 
           {/* Emergency Contact Button */}
           <button
-            onClick={() => window.location.href = 'tel:+243000000000'}
+            onClick={() => window.location.href = 'tel:+243898108447'}
             className="w-full mt-6 bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-xl shadow-lg shadow-rose-900/50 transition-all duration-300 flex items-center justify-center gap-3"
           >
             <Phone className="w-5 h-5" />
@@ -373,7 +373,7 @@ export default function VerifyBadgePage({ params }: VerifyPageProps) {
         {/* Emergency Contact Button - Fixed at Bottom */}
         <div className="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-950 via-slate-950 to-transparent">
           <button
-            onClick={() => window.location.href = 'tel:+243000000000'}
+            onClick={() => window.location.href = 'tel:+243898108447'}
             className={`w-full max-w-md mx-auto block ${isActive ? 'bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700' : 'bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-700 hover:to-red-700'} text-white font-semibold py-4 px-6 rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-3`}
           >
             <Phone className="w-5 h-5" />

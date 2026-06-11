@@ -109,7 +109,7 @@ export default function HomePage() {
     <div className="w-full bg-[hsl(220_18%_8%)]">
       <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden">
         <img
-          src="https://build-my-site-now-890.lovable.app/assets/hero-car-BegUkEvH.jpg"
+          src="/images/hero-car.jpg"
           alt="Hero"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
@@ -215,14 +215,14 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <img
-                src="https://build-my-site-now-890.lovable.app/assets/jdfp-branding-UZL4Avtx.jpeg"
+                src="/images/jdfp-branding.jpeg"
                 alt="JDFP Branding"
                 className="w-full h-[600px] object-cover rounded-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_18%_8%)]/40 to-transparent rounded-2xl" />
               <div className="absolute bottom-6 left-6">
                 <img
-                  src="https://build-my-site-now-890.lovable.app/assets/logo-jdfp-QVc2ccJJ.jpeg"
+                  src="/images/logo-jdfp.jpeg"
                   alt="JDFP Logo"
                   className="w-20 h-20 object-cover rounded-xl border-2 border-[hsl(48_100%_50%)]"
                 />
@@ -264,7 +264,7 @@ export default function HomePage() {
 
       <section className="py-24 bg-[hsl(220_16%_12%)] relative overflow-hidden">
         <img
-          src="https://build-my-site-now-890.lovable.app/assets/office-premium-D-UgUq69.jpg"
+          src="/images/office-premium.jpg"
           alt="Office Premium"
           className="absolute inset-0 w-full h-full object-cover opacity-10"
         />

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan Marketing — JDFP Communication</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; background: #fff; color: #111; font-size: 13px; line-height: 1.5; }
+  .page { max-width: 900px; margin: 0 auto; padding: 40px 48px; }
+
+  .cover { text-align: center; padding: 60px 0 40px; border-bottom: 3px solid #f59e0b; margin-bottom: 40px; }
+  .cover .logo-box { display: inline-block; background: #0f1117; border: 1px solid #2a3040; border-radius: 12px; padding: 14px 24px; margin-bottom: 24px; }
+  .cover .logo-name { font-size: 28px; font-weight: 900; color: #fff; letter-spacing: 3px; }
+  .cover .logo-sub { font-size: 10px; color: #f59e0b; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; display: block; margin-top: 2px; }
+  .cover h1 { font-size: 32px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; color: #111; margin-bottom: 8px; }
+  .cover p { color: #555; font-size: 14px; }
+  .cover .meta { margin-top: 20px; display: flex; justify-content: center; gap: 32px; font-size: 12px; color: #888; }
+  .cover .meta span strong { color: #111; display: block; font-size: 13px; }
+
+  h2 { font-size: 16px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; color: #111; margin: 32px 0 12px; padding-bottom: 6px; border-bottom: 2px solid #f59e0b; }
+  h3 { font-size: 13px; font-weight: 700; color: #111; margin: 20px 0 8px; }
+
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 12px; }
+  th { background: #0f1117; color: #fff; padding: 8px 10px; text-align: left; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  td { padding: 7px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+  tr:nth-child(even) td { background: #f9fafb; }
+
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 700; }
+  .badge-red { background: #fee2e2; color: #991b1b; }
+  .badge-yellow { background: #fef3c7; color: #92400e; }
+  .badge-green { background: #d1fae5; color: #065f46; }
+
+  .platform-block { border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px 20px; margin: 0 0 16px; page-break-inside: avoid; }
+  .platform-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .platform-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 900; flex-shrink: 0; }
+  .platform-icon.whatsapp { background: #d1fae5; color: #065f46; }
+  .platform-icon.facebook { background: #dbeafe; color: #1e40af; }
+  .platform-icon.instagram { background: #fce7f3; color: #9d174d; }
+  .platform-icon.linkedin { background: #dbeafe; color: #1e3a5f; }
+  .platform-icon.tiktok { background: #e0e7ff; color: #3730a3; }
+  .platform-icon.youtube { background: #fee2e2; color: #991b1b; }
+  .platform-title { font-size: 15px; font-weight: 900; }
+  .platform-subtitle { font-size: 11px; color: #6b7280; margin-top: 1px; }
+
+  ul { padding-left: 16px; margin: 6px 0; }
+  li { margin-bottom: 3px; color: #374151; }
+
+  .col2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .mini-section label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #9ca3af; display: block; margin-bottom: 4px; }
+
+  .budget-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 12px 0; }
+  .budget-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; text-align: center; }
+  .budget-card .amount { font-size: 20px; font-weight: 900; color: #f59e0b; }
+  .budget-card .label { font-size: 11px; color: #6b7280; margin-top: 3px; }
+
+  .phase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0; }
+  .phase-card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px; }
+  .phase-num { font-size: 11px; font-weight: 700; color: #f59e0b; text-transform: uppercase; letter-spacing: 1px; }
+  .phase-title { font-size: 13px; font-weight: 700; margin: 4px 0; }
+  .phase-period { font-size: 11px; color: #6b7280; margin-bottom: 8px; }
+
+  .footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e7eb; text-align: center; font-size: 11px; color: #9ca3af; }
+
+  @media print {
+    body { font-size: 12px; }
+    .page { padding: 20px 32px; }
+    .platform-block { page-break-inside: avoid; }
+    h2 { page-break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="cover">
+    <div class="logo-box">
+      <div class="logo-name">JDFP</div>
+      <span class="logo-sub">Communication</span>
+    </div>
+    <h1>Plan Marketing Digital</h1>
+    <p>Stratégie de présence digitale — Kinshasa &amp; Brazzaville</p>
+    <div class="meta">
+      <span><strong>Juin 2026</strong>Document interne</span>
+      <span><strong>jdfp-communication.com</strong>Av. Tombalbaye n° A19, Kinshasa/Gombe</span>
+      <span><strong>+243 898 108 447</strong>contact@jdfp-communication.com</span>
+    </div>
+  </div>
+
+  <!-- ÉTAT DES SERVICES -->
+  <h2>1. État des services en ligne</h2>
+  <table>
+    <thead>
+      <tr><th>Service</th><th>Page</th><th>Formulaire</th><th>Base de données</th><th>Email auto</th><th>État</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Visas &amp; Voyage</td><td>/visas</td><td>✓</td><td>✓</td><td>✓</td><td><span class="badge badge-green">Opérationnel</span></td></tr>
+      <tr><td>Véhicules</td><td>/vehicules</td><td>✓</td><td>✓</td><td>✓</td><td><span class="badge badge-green">Opérationnel</span></td></tr>
+      <tr><td>Domaines &amp; Hosting</td><td>/domaines</td><td>✓</td><td>✓</td><td>✓</td><td><span class="badge badge-green">Opérationnel</span></td></tr>
+      <tr><td>Publicité</td><td>/publicite</td><td>✓</td><td>✓</td><td>✓</td><td><span class="badge badge-green">Opérationnel</span></td></tr>
+      <tr><td>Contact</td><td>/contact</td><td>✓</td><td>✓</td><td>✓</td><td><span class="badge badge-green">Opérationnel</span></td></tr>
+      <tr><td>Services IT</td><td>/services-it</td><td>WhatsApp CTA</td><td>—</td><td>—</td><td><span class="badge badge-green">Opérationnel</span></td></tr>
+      <tr><td>IA Santé</td><td>/ia/sante</td><td>Démo</td><td>Logs</td><td>—</td><td><span class="badge badge-yellow">Démonstration</span></td></tr>
+      <tr><td>IA Juridique</td><td>/ia/droit</td><td>Démo</td><td>Logs</td><td>—</td><td><span class="badge badge-yellow">Démonstration</span></td></tr>
+      <tr><td>IA Sécurité</td><td>/ia/securite</td><td>Démo</td><td>Logs</td><td>—</td><td><span class="badge badge-yellow">Démonstration</span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- SEGMENTS -->
+  <h2>2. Segments clients cibles</h2>
+  <table>
+    <thead>
+      <tr><th>Segment</th><th>Profil</th><th>Service principal</th><th>Message clé</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>PME congolaises</strong></td><td>Patrons, directeurs</td><td>Services IT, Domaines</td><td>« Digitalisez votre business »</td></tr>
+      <tr><td><strong>Grandes entreprises / ONG</strong></td><td>DAF, Directeurs généraux</td><td>Publicité, IT sur mesure</td><td>« ROI mesurable, expertise locale »</td></tr>
+      <tr><td><strong>Particuliers</strong></td><td>Voyageurs, diaspora</td><td>Visas, Véhicules</td><td>« Simplifiez vos démarches »</td></tr>
+      <tr><td><strong>Startups tech</strong></td><td>Fondateurs, développeurs</td><td>IA, Cloud, Dev</td><td>« Votre partenaire tech à Kinshasa »</td></tr>
+    </tbody>
+  </table>
+
+  <!-- PHASES -->
+  <h2>3. Plan en 3 phases</h2>
+  <div class="phase-grid">
+    <div class="phase-card">
+      <div class="phase-num">Phase 1</div>
+      <div class="phase-title">Notoriété</div>
+      <div class="phase-period">Mois 1 – 2</div>
+      <ul>
+        <li>Lancer Facebook + Instagram + LinkedIn</li>
+        <li>Activer WhatsApp Business</li>
+        <li>Référencer sur Google Business</li>
+        <li>Publier 3x/semaine</li>
+        <li>Signature email équipe</li>
+      </ul>
+    </div>
+    <div class="phase-card">
+      <div class="phase-num">Phase 2</div>
+      <div class="phase-title">Acquisition</div>
+      <div class="phase-period">Mois 3 – 4</div>
+      <ul>
+        <li>Facebook Ads Kinshasa</li>
+        <li>Programme de parrainage</li>
+        <li>Partenariats locaux (avocats, hôtels)</li>
+        <li>Présence événements business</li>
+        <li>Diffusion WhatsApp ciblée</li>
+      </ul>
+    </div>
+    <div class="phase-card">
+      <div class="phase-num">Phase 3</div>
+      <div class="phase-title">Fidélisation</div>
+      <div class="phase-period">Mois 5 +</div>
+      <ul>
+        <li>Newsletter mensuelle email</li>
+        <li>Suivi CRM (relance 3 mois)</li>
+        <li>Portfolio de réalisations</li>
+        <li>Pack maintenance mensuelle IT</li>
+        <li>Témoignages clients vidéo</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- BUDGET -->
+  <h2>4. Budget marketing mensuel estimé</h2>
+  <div class="budget-grid">
+    <div class="budget-card"><div class="amount">$0</div><div class="label">WhatsApp Business</div></div>
+    <div class="budget-card"><div class="amount">$0</div><div class="label">Google Business Profile</div></div>
+    <div class="budget-card"><div class="amount">$100</div><div class="label">Facebook / Instagram Ads</div></div>
+    <div class="budget-card"><div class="amount">$100</div><div class="label">Total minimal/mois</div></div>
+  </div>
+
+  <!-- PLATEFORMES -->
+  <h2>5. Stratégie par plateforme</h2>
+
+  <div class="platform-block">
+    <div class="platform-header">
+      <div class="platform-icon whatsapp">W</div>
+      <div>
+        <div class="platform-title">WhatsApp Business</div>
+        <div class="platform-subtitle"><span class="badge badge-red">Priorité 1 — À activer immédiatement</span></div>
+      </div>
+    </div>
+    <div class="col2">
+      <div>
+        <div class="mini-section"><label>Configuration</label>
+          <ul>
+            <li>App WhatsApp Business (gratuite) sur +243 898 108 447</li>
+            <li>Profil : nom, description, adresse, site web, horaires</li>
+            <li>Message de bienvenue automatique</li>
+            <li>Message d'absence (hors Lun–Ven 8h–17h)</li>
+            <li>Étiquettes : Visa / IT / Pub / Véhicule / Nouveau / En cours</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="mini-section"><label>Catalogue de services</label>
+          <ul>
+            <li>Facilitation visa (tarif sur demande)</li>
+            <li>Location véhicule (à partir de $X/jour)</li>
+            <li>Domaine .com (à partir de $15/an)</li>
+            <li>Réservation publicitaire (sur devis)</li>
+            <li>Services IT (sur devis)</li>
+          </ul>
+        </div>
+        <div class="mini-section" style="margin-top:10px"><label>KPI</label>
+          <ul>
+            <li>Taux de réponse &lt; 1 heure</li>
+            <li>Conversations entrantes / mois</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="platform-block">
+    <div class="platform-header">
+      <div class="platform-icon facebook">f</div>
+      <div>
+        <div class="platform-title">Facebook Page</div>
+        <div class="platform-subtitle"><span class="badge badge-red">Priorité 1 — Grand public Kinshasa</span></div>
+      </div>
+    </div>
+    <div class="col2">
+      <div>
+        <div class="mini-section"><label>Configuration</label>
+          <ul>
+            <li>Page Entreprise « JDFP Communication »</li>
+            <li>Photo de profil : logo JDFP</li>
+            <li>Couverture : image branding + tagline</li>
+            <li>Onglet Services avec prix indicatifs</li>
+            <li>Messenger avec réponses automatiques</li>
+          </ul>
+        </div>
+        <div class="mini-section" style="margin-top:10px"><label>Calendrier éditorial (3x/sem)</label>
+          <ul>
+            <li><strong>Lundi :</strong> Spotlight service</li>
+            <li><strong>Mercredi :</strong> Contenu éducatif / tips</li>
+            <li><strong>Vendredi :</strong> Témoignage / équipe</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="mini-section"><label>Facebook Ads — Kinshasa</label>
+          <ul>
+            <li>Zone : Kinshasa/Gombe + 20 km</li>
+            <li>Âge : 25 – 55 ans</li>
+            <li>Centres : business, tech, entrepreneuriat</li>
+            <li>Budget : $50/mois par service</li>
+            <li>Format : image + CTA « En savoir plus »</li>
+            <li>Commencer par : Visas + Services IT</li>
+          </ul>
+        </div>
+        <div class="mini-section" style="margin-top:10px"><label>KPI</label>
+          <ul>
+            <li>J'aime page, portée organique</li>
+            <li>Clics vers jdfp-communication.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="platform-block">
+    <div class="platform-header">
+      <div class="platform-icon instagram">IG</div>
+      <div>
+        <div class="platform-title">Instagram</div>
+        <div class="platform-subtitle"><span class="badge badge-yellow">Priorité 2 — Image de marque &amp; jeunes</span></div>
+      </div>
+    </div>
+    <div class="col2">
+      <div>
+        <div class="mini-section"><label>Profil</label>
+          <ul>
+            <li>Compte professionnel lié à Facebook Page</li>
+            <li>Bio : « Agence digitale | Kinshasa 🇨🇩 | IT • IA • Publicité • Visas »</li>
+            <li>Lien : jdfp-communication.com</li>
+          </ul>
+        </div>
+        <div class="mini-section" style="margin-top:10px"><label>Types de contenu</label>
+          <ul>
+            <li><strong>Stories</strong> (quotidien) : coulisses, polls, actualités</li>
+            <li><strong>Reels</strong> (2x/sem) : démos 15–30s, équipe, IA</li>
+            <li><strong>Posts</strong> (4x/sem) : cartes services Canva, data visuels</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="mini-section"><label>Hashtags</label>
+          <ul>
+            <li>#KinshasaTech #DigitalCongo #RDCtech</li>
+            <li>#KinshasaBusiness #EntrepreneurDRC</li>
+            <li>#AfriqueDigitale #TechAfrica #StartupAfrica</li>
+          </ul>
+        </div>
+        <div class="mini-section" style="margin-top:10px"><label>KPI</label>
+          <ul>
+            <li>Abonnés, taux d'engagement (%)</li>
+            <li>Clics lien bio</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="platform-block">
+    <div class="platform-header">
+      <div class="platform-icon linkedin">in</div>
+      <div>
+        <div class="platform-title">LinkedIn</div>
+        <div class="platform-subtitle"><span class="badge badge-yellow">Priorité 2 — B2B, ONG, partenaires</span></div>
+      </div>
+    </div>
+    <div class="col2">
+      <div>
+        <div class="mini-section"><label>Configuration</label>
+          <ul>
+            <li>Page Entreprise avec mots-clés : « digital agency Kinshasa »</li>
+            <li>Banner : photo bureau + tagline professionnel</li>
+            <li>Tous les employés ajoutés comme membres</li>
+          </ul>
+        </div>
+        <div class="mini-section" style="margin-top:10px"><label>Contenu (2x/semaine)</label>
+          <ul>
+            <li>Études de cas clients réels</li>
+            <li>Insights : « L'état du numérique en RDC »</li>
+            <li>Articles HealthTech, E-commerce Afrique</li>
+            <li>Offres d'emploi (visibilité gratuite)</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="mini-section"><label>Cibles B2B</label>
+          <ul>
+            <li>Directeurs d'entreprise, DAF, responsables IT</li>
+            <li>ONG : UNICEF, OMS, World Bank en RDC</li>
+            <li>Diaspora congolaise (Belgique, France, Canada)</li>
+            <li>Investisseurs et partenaires régionaux</li>
+          </ul>
+        </div>
+        <div class="mini-section" style="margin-top:10px"><label>KPI</label>
+          <ul>
+            <li>Vues publications, connexions B2B</li>
+            <li>Demandes de devis entrantes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="platform-block">
+    <div class="platform-header">
+      <div class="platform-icon tiktok">TT</div>
+      <div>
+        <div class="platform-title">TikTok</div>
+        <div class="platform-subtitle"><span class="badge badge-green">Optionnel — Notoriété, 18–35 ans</span></div>
+      </div>
+    </div>
+    <div class="col2">
+      <div>
+        <div class="mini-section"><label>Idées de contenu</label>
+          <ul>
+            <li>Démo IA Santé en 30 secondes</li>
+            <li>« Un visa en 5 étapes » (format rapide)</li>
+            <li>Coulisses de l'équipe tech qui travaille</li>
+            <li>Challenges locaux + son tendance Kinshasa</li>
+            <li>« Day in the life » d'un développeur JDFP</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="mini-section"><label>Pourquoi TikTok ?</label>
+          <ul>
+            <li>Atteint les 18–35 ans congolais</li>
+            <li>Futur vivier de clients IT</li>
+            <li>Diaspora très active sur la plateforme</li>
+            <li>Croissance rapide en Afrique centrale</li>
+          </ul>
+        </div>
+        <div class="mini-section" style="margin-top:10px"><label>KPI</label>
+          <ul><li>Vues, abonnés, partages</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="platform-block">
+    <div class="platform-header">
+      <div class="platform-icon youtube">YT</div>
+      <div>
+        <div class="platform-title">YouTube</div>
+        <div class="platform-subtitle"><span class="badge badge-green">Optionnel — SEO vidéo long terme</span></div>
+      </div>
+    </div>
+    <div class="col2">
+      <div>
+        <div class="mini-section"><label>Types de vidéos</label>
+          <ul>
+            <li>Tutoriels : « Commander son domaine .com »</li>
+            <li>Présentations services : PME, IA, Publicité</li>
+            <li>Démos IA en live commenté</li>
+            <li>Témoignages clients (format interview 2–3 min)</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="mini-section"><label>Avantage SEO</label>
+          <ul>
+            <li>Les vidéos YouTube apparaissent dans Google</li>
+            <li>« Agence IT Kinshasa » → trafic organique</li>
+            <li>Contenu pérenne (vues sur 1–2 ans)</li>
+          </ul>
+        </div>
+        <div class="mini-section" style="margin-top:10px"><label>KPI</label>
+          <ul><li>Vues, abonnés, clics vers le site</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLEAU RÉCAP PLATEFORMES -->
+  <h2>6. Récapitulatif des plateformes</h2>
+  <table>
+    <thead>
+      <tr><th>Plateforme</th><th>Priorité</th><th>Audience</th><th>Fréquence</th><th>Budget</th><th>Objectif</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>WhatsApp Business</strong></td><td><span class="badge badge-red">Urgent</span></td><td>Tous clients</td><td>Temps réel</td><td>$0</td><td>Conversion directe</td></tr>
+      <tr><td><strong>Facebook Page</strong></td><td><span class="badge badge-red">Urgent</span></td><td>Grand public Kinshasa</td><td>3x / semaine</td><td>$50–100/mois</td><td>Notoriété + leads</td></tr>
+      <tr><td><strong>Instagram</strong></td><td><span class="badge badge-yellow">Important</span></td><td>18–45 ans, image</td><td>4–5x / semaine</td><td>$0 organique</td><td>Image de marque</td></tr>
+      <tr><td><strong>LinkedIn</strong></td><td><span class="badge badge-yellow">Important</span></td><td>B2B, ONG, partenaires</td><td>2x / semaine</td><td>$0 organique</td><td>Clients entreprises</td></tr>
+      <tr><td><strong>TikTok</strong></td><td><span class="badge badge-green">Optionnel</span></td><td>18–35 ans</td><td>3–5x / semaine</td><td>$0</td><td>Notoriété jeunes</td></tr>
+      <tr><td><strong>YouTube</strong></td><td><span class="badge badge-green">Optionnel</span></td><td>Tous, SEO</td><td>1–2x / mois</td><td>$0</td><td>SEO + confiance</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    JDFP-Communication · Av. Tombalbaye n° A19 local 03, Kinshasa/Gombe, RDC · RCCM 14-A-5902 · NIF A1404113M<br>
+    contact@jdfp-communication.com · +243 898 108 447 · jdfp-communication.com
+  </div>
+
+</div>
+</body>
+</html>

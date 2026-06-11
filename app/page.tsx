@@ -78,10 +78,9 @@ const stats = [
 ];
 
 const teamMembers = [
-  { name: 'Jean-Daniel F.', role: 'Directeur Général', img: 'https://build-my-site-now-890.lovable.app/assets/team-patou-HuLE9MzT.jpg' },
-  { name: 'Marie K.', role: 'Responsable IT', img: 'https://build-my-site-now-890.lovable.app/assets/team-member2-BRPD_obl.jpg' },
-  { name: 'Patrick M.', role: 'Chef de Projet IA', img: 'https://build-my-site-now-890.lovable.app/assets/team-member3-bq5uoIX1.jpg' },
-  { name: 'Sophie N.', role: 'Directrice Comm.', img: 'https://build-my-site-now-890.lovable.app/assets/team-member4-BLi1DsDK.jpg' },
+  { name: 'Patou Ndongala', role: 'Directeur Général', img: '/team/patou.jpeg' },
+  { name: 'Ntumba Julia', role: 'Data Manager', img: '/team/Julia.jpeg' },
+  { name: 'Vernaud Ikenga', role: 'Responsable IT', img: null },
 ];
 
 const whyItems = [
@@ -313,16 +312,28 @@ export default function HomePage() {
             <div className="divider-gold mx-auto" />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
             {teamMembers.map((member) => (
               <div key={member.name} className="card-dark transition-all group overflow-hidden hover:border-[hsl(48_100%_50%)]/40">
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={member.img}
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_18%_8%)] via-transparent to-transparent" />
+                <div className="relative h-64 overflow-hidden bg-[hsl(220_16%_14%)] flex items-center justify-center">
+                  {member.img ? (
+                    <>
+                      <img
+                        src={member.img}
+                        alt={member.name}
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_18%_8%)] via-transparent to-transparent" />
+                    </>
+                  ) : (
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-24 h-24 rounded-full bg-[hsl(220_12%_22%)] border-2 border-[hsl(48_100%_50%)]/30 flex items-center justify-center">
+                        <span className="text-3xl font-bold text-[hsl(48_100%_50%)]/60">
+                          {member.name.split(' ').map((n: string) => n[0]).join('')}
+                        </span>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 <div className="p-4">
                   <p className="text-white font-bold">{member.name}</p>

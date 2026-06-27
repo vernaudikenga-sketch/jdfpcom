@@ -77,11 +77,16 @@ export default function ContactPage() {
       return;
     }
 
-    await fetch('/api/send-email', {
+    const emailRes = await fetch('/api/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ type: 'contact', data: form }),
     });
+
+    if (!emailRes.ok) {
+      const body = await emailRes.json().catch(() => ({}));
+      console.error('[contact] email error:', body);
+    }
 
     setSuccess(true);
     setSubmitting(false);

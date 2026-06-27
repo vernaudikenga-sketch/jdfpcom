@@ -257,10 +257,16 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Unknown type' }, { status: 400 });
   }
 
-  await Promise.all([
-    resend.emails.send({ from: FROM, to: clientEmail, subject: clientSubject, html: clientHtml }),
-    resend.emails.send({ from: FROM, to: JDFP_EMAIL, subject: alertSubject, html: alertHtml }),
-  ]);
+  try {
+    const [clientResult, alertResult] = await Promise.all([
+      resend.emails.send({ from: FROM, to: clientEmail, subject: clientSubject, html: clientHtml }),
+      resend.emails.send({ from: FROM, to: JDFP_EMAIL, subject: alertSubject, html: alertHtml }),
+    ]);
+    console.log('[send-email] client:', clientResult, '| alert:', alertResult);
+  } catch (err) {
+    console.error('[send-email] Resend error:', err);
+    return NextResponse.json({ error: String(err) }, { status: 500 });
+  }
 
   return NextResponse.json({ ok: true });
 }

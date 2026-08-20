@@ -5,6 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import WhatsAppButton from './WhatsAppButton';
 import PartnerTicker from './PartnerTicker';
+import PromoNotification from './PromoNotification';
 
 export default function ConditionalLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -23,6 +24,7 @@ export default function ConditionalLayout({ children }: { children: React.ReactN
       </main>
       <Footer />
       <WhatsAppButton />
+      <PromoNotification />
     </>
   );
 }
